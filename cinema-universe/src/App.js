@@ -1,5 +1,5 @@
 // import "./App.css";
-import background from './images/background-1.png'
+import background from './images/background.png'
 import user from './images/user.png'
 import poster from './images/ramonda.png'
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       {/* Bagian Hero */}
-      <div className="max-w-[79rem] h-[37.5rem] mx-auto bg-no-repeat"
+      <div className="max-w-auto h-[37.5rem] mx-auto bg-no-repeat"
       style={{
         backgroundImage: `url('${background}')`,
         backgroundSize: 'cover',
@@ -44,30 +44,34 @@ function App() {
 
           <ul className="flex flex-row gap-8 text-lg text-white">
             <li>
-              <a href="#">Home</a>
+              <a className="font-bold hover:text-xl" href="#">Home</a>
             </li>
             <li>
-              <a href="#">Movies</a>
+              <a href="#" className="hover:text-xl">Movies</a>
             </li>
             <li>
-              <a href="#">Series</a>
+              <a href="#" className="hover:text-xl">Series</a>
             </li>
             <li>
-              <a href="#">Favorites</a>
+              <a href="#" className="hover:text-xl">Favorites</a>
             </li>
           </ul>
 
           <div className="flex flex-row items-center gap-5">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <a href="#" className="hover:w-[26px] hover:h-[26px]">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+              </svg>
+            </a>
 
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 17H20L18.5951 15.5951C18.2141 15.2141 18 14.6973 18 14.1585V11C18 8.38757 16.3304 6.16509 14 5.34142V5C14 3.89543 13.1046 3 12 3C10.8954 3 10 3.89543 10 5V5.34142C7.66962 6.16509 6 8.38757 6 11V14.1585C6 14.6973 5.78595 15.2141 5.40493 15.5951L4 17H9M15 17V18C15 19.6569 13.6569 21 12 21C10.3431 21 9 19.6569 9 18V17M15 17H9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <a href="#" className="hover:w-[26px] hover:h-[26px]">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 17H20L18.5951 15.5951C18.2141 15.2141 18 14.6973 18 14.1585V11C18 8.38757 16.3304 6.16509 14 5.34142V5C14 3.89543 13.1046 3 12 3C10.8954 3 10 3.89543 10 5V5.34142C7.66962 6.16509 6 8.38757 6 11V14.1585C6 14.6973 5.78595 15.2141 5.40493 15.5951L4 17H9M15 17V18C15 19.6569 13.6569 21 12 21C10.3431 21 9 19.6569 9 18V17M15 17H9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
 
             <div className="flex flex-row items-center gap-1">
-              <a href="#"><img src={user}></img></a>
+              <a href="#" className="hover:w-[34px] hover:h-[34px]"><img src={user}></img></a>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M3.72456 6.64143C3.94645 6.41954 4.29367 6.39937 4.53835 6.58092L4.60845 6.64143L9.99984 12.0325L15.3912 6.64143C15.6131 6.41954 15.9603 6.39937 16.205 6.58092L16.2751 6.64143C16.497 6.86332 16.5172 7.21054 16.3356 7.45522L16.2751 7.52532L10.4418 13.3586C10.2199 13.5805 9.87267 13.6007 9.628 13.4192L9.5579 13.3586L3.72456 7.52532C3.48048 7.28124 3.48048 6.88551 3.72456 6.64143Z" fill="#F9F9F9"/>
               </svg>
@@ -75,25 +79,22 @@ function App() {
           </div>
         </nav>
 
-
-        {/* Box Tutup Tulisan Get Ticket */}
-        <div className="max-w-full h-14 bg-black translate-y-[30rem]"></div>
       </div>
 
 
-      <div className="max-w-[79rem] mx-auto bg-black">
+      <div className="max-w-auto mx-auto bg-black">
         {/* Bagian Video */}
-        <div className="max-w-6xl text-white mx-auto flex flex-row justify-between font-bold text-lg mb-16">
+        <div className="max-w-6xl text-white mx-auto flex flex-row flex-wrap justify-between font-bold text-lg mb-16">
           {/* Trailer */}
           <div>
             <p className="mb-3">WATCH TRAILER</p>
-            <iframe className="w-[30rem] h-56 rounded-md" src="https://www.youtube.com/watch?v=dQw4w9WgXcQ"></iframe>
+            <iframe className="w-[30rem] h-56 rounded-md" src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
           </div>
 
           {/* Streaming */}
           <div>
             <p className="mb-3">WATCH MOVIE NOW</p>
-            <iframe className="w-[30rem] h-56 rounded-md" src="https://www.youtube.com/watch?v=dQw4w9WgXcQ"></iframe>
+            <iframe className="w-[30rem] h-56 rounded-md" src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
           </div>
         </div>
 
